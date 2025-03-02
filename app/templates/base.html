@@ -20,6 +20,18 @@
     <header>
         {% include "header.html" %}
     </header>
+  </header>
+    
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <ul class="flashes">
+    {% for category, message in messages %}
+    <li class="{{ category }}" style="background-color: #14d7dba9; color: #7c23bc; border: 1px solid #d6e9c6; padding: 10px; margin-bottom: 10px; border-radius: 5px; font-size: 16px;">{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  
     <main>
         <div class="container">
             {% block main %}{% endblock %}

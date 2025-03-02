@@ -8,29 +8,29 @@
 <form class = "contactForm" method = "POST" action="">
     {{ form.csrf_token }}
 
-    {{ form.name.label }}
-    <strong>(Required)</strong>
+    <strong> {{ form.name.label }} </strong>
+    <strong style="color: red;">(Required)</strong>
     <p>Please enter your full name.</p>
-    {{ form.name(size=40, placeholder = "like you know Jason Statham") }}
+    {{ form.name(size=40, placeholder = "eg. Joe Ling") }}
     <br>
 
-    {{ form.email.label }}
-    <strong>(Required)</strong>
+    <strong> {{ form.email.label }} </strong>
+    <strong style="color: red;">(Required)</strong>
     <p>Please enter your e-mail address.</p>
-    {{ form.email(size=40, placeholder = "sth like this: eg@eg.com") }}
+    {{ form.email(size=40, placeholder = "eg. joeyling@gmail.com") }}
     <br>
 
-    {{ form.subject.label }}
-    <strong>(Required)</strong>
+    <strong> {{ form.subject.label }} </strong>
+    <strong style="color: red;">(Required)</strong>
     <p>Please enter the subject of the message.</p>
     {{ form.subject(size=40) }}
     <br>
 
-    {{ form.message.label }}
-    <strong>(Required)</strong>
+    <strong> {{ form.message.label }} </strong>
+    <strong style="color: red;">(Required)</strong>
     <p>Please enter the message you would like to send.</p>
     {{ form.message(size=70) }}
     <br>
-    <button type = "submit">Send</button>
+    <button style="background-color: rgb(255, 0, 76); color: white;"type = "submit">Send</button>
 </form>
 {% endblock %}

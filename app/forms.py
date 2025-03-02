@@ -7,12 +7,12 @@ class ContactForm(FlaskForm):
     validators = [InputRequired()])
 
     # placeholder = "Please enter your e-mail address.",
-    email = EmailField('E-MAIL',
+    email = EmailField('E-mail',
     [validators.DataRequired(), 
     validators.Email()])
 
-    subject = StringField('SUBJECT',
+    subject = StringField('Subject',
     validators = [InputRequired()])
 
-    message = StringField('MESSAGE',
+    message = StringField('Message',
     validators = [InputRequired()])
